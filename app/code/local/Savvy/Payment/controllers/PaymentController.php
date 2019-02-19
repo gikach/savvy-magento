@@ -42,7 +42,7 @@ class Savvy_Payment_PaymentController extends Mage_Core_Controller_Front_Action
         $payment_status = 'Pending Payment';
         //$payment_status = Mage::getModel('sales/order_status')->load($order->getStatus(), 'status')->getLabel();
         $status = $order->getStatus();
-        $button_html = '<a href="#" class="button" id="paybear-all">Pay with Crypto</a>';
+        $button_html = '<a href="#" class="button" id="savvy-all">Pay with Crypto</a>';
         if ($status == 'complete' || $status == 'processing' ) {
             $payment_status = 'Paid';
             $button_html = '<a href="' . Mage::getUrl('checkout/onepage/success') .'" class="button" >Continue</a>';
