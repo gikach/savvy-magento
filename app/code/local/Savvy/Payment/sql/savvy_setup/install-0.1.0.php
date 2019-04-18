@@ -95,9 +95,7 @@ try {
     $statusModel->assignState(Mage_Sales_Model_Order::STATE_HOLDED);
 
 } catch (Exception $e) {
-    var_dump($e);
-    die('omg');
-    // nothing
+    Mage::log($e->getMessage());
 }
 
 

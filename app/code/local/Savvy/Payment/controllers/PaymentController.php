@@ -362,7 +362,8 @@ class Savvy_Payment_PaymentController extends Mage_Core_Controller_Front_Action
                             $order->save();
                         }
 
-                        echo $params->invoice; //stop further callbacks
+                        //stop further callbacks
+                        $this->getResponse()->setBody($params->invoice);
                         return;
 
                     } else {
